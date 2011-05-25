@@ -1,7 +1,9 @@
 # Django settings for legislateme project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+BASE_DIR = os.path.normpath(os.path.dirname(__file__)+'/../')
 
 ADMINS = (
     ('Nicholas Wertzberger', 'wertnick@gmail.com'),
@@ -11,8 +13,8 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite',
-        'NAME': BASE_DIR + 'legislateme.sqlite',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR + '/legislateme.sqlite',
         'USER': '',
         'PASSWORD': '',
         'HOST': '',
@@ -45,7 +47,7 @@ USE_L10N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = '/home/nwertzberger/sites/legislateme.org/public/media'
+MEDIA_ROOT = BASE_DIR + '/public/media'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
