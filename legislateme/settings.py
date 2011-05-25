@@ -3,7 +3,7 @@ import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-BASE_DIR = os.path.normpath(os.path.dirname(__file__)+'/../')
+BASE_DIR = os.path.normpath(os.path.dirname(__file__)+'/../') + '/'
 
 ADMINS = (
     ('Nicholas Wertzberger', 'wertnick@gmail.com'),

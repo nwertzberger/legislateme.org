@@ -12,11 +12,11 @@ def index(r):
     """
     try:
         bills = Bill.objects.get(passed = False)
-    except: 
+    except Bill.DoesNotExist: 
         bills = None
 
     t = loader.get_template('bills/index.html')
-    c = { 'bills':bills, }
+    c = Context({ 'bills':bills, })
     return HttpResponse(t.render(c))
 
 
