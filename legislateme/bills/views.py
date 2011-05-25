@@ -11,12 +11,11 @@ def index(r):
     Shows the main page of the site.
     """
     try:
-        bills = Bill.objects.get(passed = False)
+        bills = Bill.objects.get(active = True)
     except Bill.DoesNotExist: 
         bills = None
 
     t = loader.get_template('bills/index.html')
     c = Context({ 'bills':bills, })
     return HttpResponse(t.render(c))
-
 
