@@ -5,5 +5,25 @@
     </head>
     <body>
         <h1>Legislate Me</h1>
+        <p>
+        This will be a site dedicated to informing the United States about
+        everything legislature is doing. This information is already
+        available, but the need for a law degree to understand it seems
+        to undermine the purpose of these being public. In an effort to stop
+        the media, who is completely partisan to either the Republican or
+        Democratic Party, from having total control over what the general
+        public understands about what is happening in the world. This site
+        will cut through the bullshit and offer a clean interface showing
+        current bills, who started them, and who supports them.
+        </p>
+        <p>
+        In other words, this site is only concerned with action, not rhetoric.
+        This site also does not forget.
+        </p>
+        <hr>
+        {% for bill in bills %}
+        <h2> {{ bill.name }} </h2>
+        {% endfor %}
+
     </body>
 </html>

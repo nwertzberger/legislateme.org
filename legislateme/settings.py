@@ -2,6 +2,7 @@
 import os
 
 DEBUG = True
+PROD = False
 TEMPLATE_DEBUG = DEBUG
 BASE_DIR = os.path.normpath(os.path.dirname(__file__)+'/../') + '/'
 
@@ -90,5 +91,5 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
-    'bills',
+    'legislateme.bills',
 )
